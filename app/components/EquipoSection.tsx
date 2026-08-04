@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useLang } from "../context/LanguageContext";
 import { t, tx } from "../lib/translations";
 
@@ -36,13 +37,26 @@ export default function EquipoSection() {
           {tx(t.equipo.label, lang)}
         </span>
 
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-neutral-800 leading-tight mb-4 max-w-2xl">
-            {tx(t.equipo.heading, lang)}
-          </h2>
-          <p className="text-neutral-600 text-lg leading-relaxed max-w-2xl">
-            {tx(t.equipo.body, lang)}
-          </p>
+        {/* Header: text left, image right */}
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center mb-16">
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-neutral-800 leading-tight mb-4">
+              {tx(t.equipo.heading, lang)}
+            </h2>
+            <p className="text-neutral-600 text-lg leading-relaxed">
+              {tx(t.equipo.body, lang)}
+            </p>
+          </div>
+          {/* Image — fills the right column, contained to that height */}
+          <div className="relative w-full h-64 md:h-full md:min-h-[220px] rounded-2xl overflow-hidden">
+            <Image
+              src="/images/0-infinito.jpg"
+              alt="De 0 a infinito — IA por la Identidad"
+              fill
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 md:gap-12">

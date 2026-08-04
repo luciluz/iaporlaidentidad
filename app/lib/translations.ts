@@ -155,8 +155,8 @@ export const t = {
           en: "Semantic linking of reports to investigations",
         },
         description: {
-          es: "Modelos basados en embeddings y LLM que asocian cada nuevo reporte o testimonio con las investigaciones abiertas que puede hacer avanzar, transformando una base de datos fragmentada en un corpus conectado.",
-          en: "Embedding and LLM-based models that link each new report or testimony to the open investigations it can advance, turning a fragmented database into a connected corpus.",
+          es: "Modelos basados en embeddings y LLM que asocian cada nuevo reporte o testimonio con las investigaciones abiertas que puede hacer avanzar, transformando un acervo fragmentado en un corpus conectado.",
+          en: "Embedding and LLM-based models that link each new report or testimony to the open investigations it can advance, turning a fragmented archive into a connected corpus.",
         },
         link: null,
       },
